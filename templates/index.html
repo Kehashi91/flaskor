@@ -1,0 +1,13 @@
+{% extends "basetemplate.html" %}
+{% block page_content %}
+
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Hello,{% if name %}{{ name }}{% else %}Stranger{% endif %}</h1>
+        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <p>{{ moment(current_time).format('LLL')}} +++++++ which was {{ moment(current_time).fromNow(refresh=True) }}</p>
+      </div>
+{{ wtf.quick_form(form) }}
+    </div>
+{% endblock %}
